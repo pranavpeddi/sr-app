@@ -1,0 +1,19 @@
+
+ .subject-categories-form {
+    background-color: #fff;
+    box-shadow: 0 0 0 0 rgb(90 113 208 / 11%), 0 4px 16px 0 rgb(167 175 183 / 33%);
+    padding: 20px;
+    margin: 100px;
+}
+
+ h5 {
+    font-weight: 600;
+    background-color: #009bca41;
+    font-size: 18px;
+    padding: 4px;
+    border-left: 7px solid #009bca;
+}
+
+.form-control{
+    width: 50%;
+}
