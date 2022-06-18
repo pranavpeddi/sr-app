@@ -4,15 +4,22 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+// import './mdb-ui-kit/css/mdb.min.css';
 import 'font-awesome/css/font-awesome.min.css';
+import { BrowserRouter } from 'react-router-dom';
+import SrRotes from './Routes/Route'
+import NavBar from './Shared/Navbar';
+import { ToastContainer } from 'react-toastify';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <BrowserRouter>
+    <NavBar />
+    <SrRotes />
+    <ToastContainer position="top-center" />
+  </BrowserRouter>
 );
 
 // If you want to start measuring performance in your app, pass a function

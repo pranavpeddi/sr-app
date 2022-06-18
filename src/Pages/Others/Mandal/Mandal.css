@@ -1,12 +1,11 @@
-
- .subject-categories-form {
+.subject-categories-form {
     background-color: #fff;
     box-shadow: 0 0 0 0 rgb(90 113 208 / 11%), 0 4px 16px 0 rgb(167 175 183 / 33%);
     padding: 20px;
     margin: 100px;
 }
 
- h5 {
+h5 {
     font-weight: 600;
     background-color: #009bca41;
     font-size: 18px;
@@ -14,6 +13,13 @@
     border-left: 7px solid #009bca;
 }
 
-.form-control{
-    width: 50%;
+.subject-categories-form .form-control {
+    width: 95%;
+    /* border: 0px; */
+    font-weight: 400;
+    color: #3f4254;
+    border-bottom: 1px solid;
+    border-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.151);
+    font-size: 14px;
 }
