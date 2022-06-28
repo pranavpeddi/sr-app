@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import SrLogo from '../Assets/Images/Logo3.png'
 
 function NavBar() {
@@ -25,7 +26,7 @@ function NavBar() {
                     id="navbarSupportedContent">
                     <ul className="nav navbar-nav ml-auto">
                         <li className="nav-item active">
-                            <a className="nav-link" href="#">Home</a>
+                          <Link className="nav-link" to="/mandalmanageall">Mandal</Link>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" href="#">Our Website</a>
