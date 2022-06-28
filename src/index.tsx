@@ -10,10 +10,22 @@ import { BrowserRouter } from 'react-router-dom';
 import SrRotes from './Routes/Route'
 import NavBar from './Shared/Navbar';
 import { ToastContainer } from 'react-toastify';
+import CustomComp, { TEmployee } from './components/Custom/CustomHook'
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+
+const tEmployee : TEmployee ={
+  age:10,
+  department:{
+    id:1,
+    loc:'Hyd',
+    name:'IT'
+  },
+  name:'Pranav'
+}
+
 root.render(
   <BrowserRouter>
     <NavBar />

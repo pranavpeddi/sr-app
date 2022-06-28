@@ -1,8 +1,8 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { TManageAll } from '../../Interfaces/ManageAll'
 
 export interface TDropDownProps {
-    options: TManageAll[];
+    options: TManageAll[] 
     onChange: React.ChangeEventHandler<HTMLSelectElement> | undefined
     id: string;
     value: number;
@@ -13,7 +13,6 @@ export default function DropDown(props: TDropDownProps) {
     console.log(props)
     const { options, onChange, id, value, validity } = props
     return (
-
         <select id={id} className={
              "form-select" + " " + validity
         } onChange={onChange

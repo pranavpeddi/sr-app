@@ -14,16 +14,26 @@ import DropDown from "../../../components/Select/Dropdown";
 import { TManageAll } from "../../../Interfaces/ManageAll";
 import Label from "../../../components/Label/Label";
 import SRModal from "../../../components/SRModal/SRModal";
+import { ApiUtil } from "../../../API/apiUtil";
 
 function Mandal() {
     let { id } = useParams();
     let loc = useLocation();
+    let apiUtil = new ApiUtil();
     const [isModalClose,closeModal] = useState<boolean>(false);
     const [districts, setDistricts] = useState<TManageAll[]>();
     const [mandalDet, setMandalDet] = useState<TMandal>({
         details: "",
         districtNo: 0,
         id: 0,
+        createBy:0,
+        createDate:new Date(),
+        createTime:new Date(),
+        delStat:0,
+        impStat:0,
+        modifyBy:0,
+        modifyDate:new Date(),
+        modifyTime:new Date()
     });
     const initValidation = {
         details: "",
@@ -37,22 +47,13 @@ function Mandal() {
     useEffect(() => {
         getDistricts();
         if (!(loc.pathname === "/addmandal")){
-            console.log(loc);
-            
-            let getPromise = axios
-                .get(mandalEp.getById + id)
-                .then((value: AxiosResponse) => {
-                    setMandalDet(value.data);
-                });
-            toast.promise(getPromise, {
-                pending: "Fetching Mandal Details",
-                success: "Here they are 👌",
-                error: "Promise rejected 🤯",
-            });
+            getMandalDetails();
         }
-        
-     
     }, []);
+
+    const getMandalDetails = async () =>{
+        await apiUtil.fetch(mandalEp.getById + id,'Mandal').then((value:any)=>setMandalDet(value));
+    }
 
     const getDistricts = async () => {
         await axios.get(districtEp.getAll).then((value: AxiosResponse) => {
@@ -145,7 +146,7 @@ function Mandal() {
                 <form onSubmit={(e) => handleSubmit(e)}>
                     <div className="d-flex mt-4">
                         <div className="details-margin">
-                            <Label labelName="Mandal" />
+                            <Label labelName="Mandal" isMandatory />
                             <TextBox
                                 id="details"
                                 onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
@@ -163,7 +164,7 @@ function Mandal() {
                         <div>
                             {districts ? (
                                 <>
-                                    <Label labelName="Districts" />
+                                    <Label labelName="Districts" isMandatory/>
                                     <DropDown
                                         id="districtNo"
                                         onChange={(e: React.ChangeEvent<HTMLSelectElement>) =>

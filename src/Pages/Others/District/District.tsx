@@ -24,6 +24,15 @@ function District() {
         details: "",
         stateNo: 0,
         id: 0,
+        createBy:0,
+        createDate:new Date(),
+        createTime:new Date(),
+        delStat:0,
+        impStat:0,
+        modifyBy:0,
+        modifyDate:new Date(),
+        modifyTime:new Date(),
+        objPrevVal:''
     });
     const initValidation = {
         details: "",
@@ -143,7 +152,7 @@ function District() {
             <form onSubmit={(e) => handleSubmit(e)}>
                 <div className="d-flex mt-4">
                     <div className="details-margin">
-                        <Label labelName="District" />
+                        <Label labelName="District" isMandatory/>
                         <TextBox
                             id="details"
                             onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
@@ -161,7 +170,7 @@ function District() {
                     <div>
                         {states ? (
                             <>
-                                <Label labelName="State" />
+                                <Label labelName="State" isMandatory />
                                 <DropDown
                                     id="stateNo"
                                     onChange={(e: React.ChangeEvent<HTMLSelectElement>) =>

@@ -1,0 +1,31 @@
+/* .active-tab {
+
+    color: #009bca;
+    border: 2px solid #009bca;
+    background-color: #009bca;
+} */
+
+
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+    color:white;
+    border: 2px solid #009bca;
+    background-color: #009bca;
+    padding-left: 10px;
+    padding-right: 10px;
+    /* margin-right: 10px;
+    margin-top: 10px;
+    border-top: 2px solid #009bca;
+    border-left: 2px solid #009bca;
+    border-right: 2px solid #009bca; */
+    align-self: baseline;
+} 
+
+     /* .nav-tabs {
+        border-bottom:blue;
+    } */
+
+    /*
+    .nav-tabs .nav-link:hover {
+        color: gray
+    } */

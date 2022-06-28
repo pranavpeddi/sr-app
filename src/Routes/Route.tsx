@@ -15,6 +15,8 @@ import SubjectCatManageAll from '../Pages/Academics/SubjectCategories/SubjectCat
 import SubjectCategory from '../Pages/Academics/SubjectCategories/SubjectCategory';
 import ClassSectionManageAll from '../Pages/Administration/ClassSection/ClassSectionManageAll';
 import ClassSection from '../Pages/Administration/ClassSection/ClassSection';
+import CourseCategory from '../Pages/Administration/CourseCategory/CourseCategory';
+import Campus from '../Pages/Campus/Campus';
 
 
 function SrRoutes() {
@@ -37,6 +39,9 @@ function SrRoutes() {
             <Route path='/classsectionmanageall' element={<ClassSectionManageAll />} />
             <Route path='/viewclasssection/:id' element={<ClassSection />} />
             <Route path='/addclasssection' element={<ClassSection />} />
+            <Route path='/addcoursecategory' element={<CourseCategory />} />
+            <Route path="/addcampus" element={<Campus/>}/>
+            {/* addcoursecategory */}
         </Routes>
     )
 }

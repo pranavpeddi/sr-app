@@ -40,7 +40,13 @@ export const CourseCategory = {
     getAll: baseUrl + "CourseCategory/GetAllDet?userId=3",
     getById: baseUrl + "CourseCategory/GetCompDataById?userId=3&id=",
     addCourseCat : baseUrl + 'CourseCategory/SaveWithCompData?userId=3',
-    deleteCourseCat : baseUrl + 'CourseCategory/DeleteById?userId=3&id='
+    deleteCourseCat : baseUrl + 'CourseCategory/DeleteById?userId=3&id=',
+  
+}
+
+export const CampCategory = {
+    getUiPageData : baseUrl + 'CampCategory/GetUiPageData?userId=3',
+    getById: baseUrl + "CampCategory/GetCompDataById?userId=3&id=10&acadYrId=0&includeTimingDet=true&includeClassDet=true&getDetInUseStat=false&retInvalidIdMsg=true&getRelDetFromView=false",
 }
 
 

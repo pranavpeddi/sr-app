@@ -1,7 +1,7 @@
 import React, { ChangeEventHandler } from "react";
 
 interface TTextBox {
-  value: string;
+  value: string | number | any;
   placeHolder: string;
   type: string;
   id: string;
@@ -20,7 +20,6 @@ function TextBox({
   required,
   validity
 }: TTextBox) {
-  console.log({validity})
   return (
     <input
       type={type}

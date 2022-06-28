@@ -89,7 +89,7 @@ function State() {
       <form onSubmit={(e) => handleSubmit(e)}>
         <div className="d-flex mt-4">
           <div>
-            <Label labelName="State" />
+            <Label labelName="State" isMandatory/>
             <TextBox
               id="details"
               validity={validation}

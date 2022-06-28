@@ -89,7 +89,7 @@ function ClassSection() {
       <form onSubmit={(e) => handleSubmit(e)}>
         <div className="d-flex mt-4">
           <div>
-            <Label labelName="Class Section" />
+            <Label labelName="Class Section" isMandatory />
             <TextBox
               id="details"
               validity={validation}
